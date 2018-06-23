@@ -16,3 +16,36 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "front-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "settings"
+    label: "Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "data/settings.json"
+        description: "General Site Settings"
+        fields:
+          - {label: "Global title", name: "site_title", widget: "string"}
+          - label: "Post Settings"
+            name: posts
+            widget: "object"
+            fields:
+              - {label: "Number of posts on frontpage", name: front_limit, widget: number}
+              - {label: "Default Author", name: author, widget: string}
+      - name: "author"
+        label: "Author"
+        file: "data/authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            label_singular: "Author"
+            widget: list
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Position", name: "position", widget: "string"}
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
