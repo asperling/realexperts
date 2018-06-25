@@ -1,1 +1,7 @@
-{}
+{
+  "site_title": "REAL EXPERTS",
+  "posts": {
+    "front_limit": 3,
+    "author": "Christoph Rauhut"
+  }
+}

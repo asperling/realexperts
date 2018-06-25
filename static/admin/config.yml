@@ -45,8 +45,8 @@ collections:
             name: posts
             widget: "object"
             fields:
-              - {label: "Number of posts on frontpage", name: front_limit, widget: number}
-              - {label: "Default Author", name: author, widget: string}
+              - {label: "Number of posts on frontpage", name: "front_limit", widget: number}
+              - {label: "Default Author", name: "author", widget: string}
       - name: "author"
         label: "Author"
         file: "data/authors.yml"
