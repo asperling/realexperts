@@ -16,6 +16,8 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
+  console.log(tags, image);
+
   return (
     <section>
       {helmet || ''}
@@ -25,6 +27,7 @@ export const BlogPostTemplate = ({
         <p>{description}</p>
         <img src={image} />
         <PostContent content={content} />
+        Tags: {tags}
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
             <h4>Kategorien</h4>
@@ -48,6 +51,8 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  tags: PropTypes.array,
+  image: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
 }
 
@@ -61,6 +66,7 @@ const BlogPost = ({ data }) => {
       description={post.frontmatter.description}
       helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
       tags={post.frontmatter.tags}
+      image={post.frontmatter.image}
       title={post.frontmatter.title}
     />
   )

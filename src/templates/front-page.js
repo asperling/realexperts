@@ -6,12 +6,12 @@ export const FrontPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <h1 className="title is-size-3 has-text-weight-bold is-bold-light">
-          {title}
+    <section>
+      <div>
+        <h1>
+          Hey ho - {title}
         </h1>
-        <PageContent className="content" content={content} />
+        <PageContent content={content} />
       </div>
     </section>
   )
