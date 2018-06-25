@@ -37,7 +37,7 @@ collections:
     files:
       - name: "general"
         label: "Site Settings"
-        file: "data/settings.json"
+        file: "src/data/settings.json"
         description: "General Site Settings"
         fields:
           - {label: "Global title", name: "site_title", widget: "string"}
@@ -49,7 +49,7 @@ collections:
               - {label: "Default Author", name: "author", widget: string}
       - name: "author"
         label: "Author"
-        file: "data/authors.yml"
+        file: "src/data/authors.yml"
         description: "Author descriptions"
         fields:
           - name: authors
