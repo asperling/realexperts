@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Was sind die Vorteile der Google G Suite gegenüber Microsoft Office 365?
 date: '2018-03-15T19:39:15+01:00'
+image: /images/blog-featured-default.jpg
 description: >-
   Welche Vorteile bietet Google mit G Suite im direkten Vergleich mit Office
   365? Im großen Rennen im Bereich des Digital Workplace treffen zwei große
@@ -9,8 +10,11 @@ description: >-
   aktuell vorn. Aber Google holt stark auf und hat in einigen Bereichen bereits
   die Nase vorn. 
 tags:
-  - tools gsuite office365
-image: '/images/blog-featured-default.jpg'
+  - tools
+  - gsuite
+  - office365
+  - network
+  - why not multiple words?
 ---
 Hier mein Beitrag beim Google Cloud Frühstück von Seibert-Media. 
 
