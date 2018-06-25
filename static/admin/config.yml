@@ -16,6 +16,19 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "front-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "blog"
+    label: "Blog Post"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured image", name: "image", widget: "image", default: "/images/blog-featured-default.jpg"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "tags", widget: "list"}
   - name: "settings"
     label: "Settings"
     delete: false
