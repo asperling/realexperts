@@ -15,7 +15,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "front-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Claim", name: "claim", widget: "object", fields: [{label: "Heading", name: "heading", widget: "string"}, {label: "Teaser text", name: "teaser", widget: "text"}, {label: "Link to", name: "linkto", widget: "relation", collection: "pages", searchFields: [name, path, title], valueField: "path"}]}
+          - {label: "Thesis", name: "thesis", widget: list, fields: [{label: "Highlight", name: "highlighted", widget: "boolean"}, {label: "Headline", name: "headline", widget: "string"}, {label: "Body", name: "body", widget: "markdown"}]}
+          - {label: "Featured video", name: "video", widget: string}
+          - {label: "Related Posts", name: "related", widget: "list", fields: [{name: "post", label: "Post", widget: "relation", collection: "blog", searchFields: [name, path, title], valueField: path}]}
   - name: "blog"
     label: "Blog Post"
     folder: "src/pages/blog"
@@ -27,9 +30,9 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured image", name: "image", widget: "image", default: "/images/blog-featured-default.jpg"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Categories", name: "tags", widget: "list"}
-      - {label: "Related Posts", name: "related", widget: "list", fields: [{name: "post", label: "Post", widget: "relation", collection: "blog", searchFields: [name, path, title], valueField: path}]
+      - {label: "Related Posts", name: "related", widget: "list", fields: [{name: "post", label: "Post", widget: "relation", collection: "blog", searchFields: [name, path, title], valueField: path}]}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
     label: "Settings"
     delete: false
