@@ -16,8 +16,6 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
-  console.log(tags, image);
-
   return (
     <section>
       {helmet || ''}
@@ -28,7 +26,7 @@ export const BlogPostTemplate = ({
         <img src={image} />
         <PostContent content={content} />
         Tags: {tags}
-        {tags && tags.length ? (
+        {tags ? (
           <div style={{ marginTop: `4rem` }}>
             <h4>Kategorien</h4>
             <p>
